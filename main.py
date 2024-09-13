@@ -14,8 +14,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-#Load and repare data
-train = pd.read_csv('train.csv')
+#Load and prepare data
+# Make sure the files are in the same directory as your script, or
+train = pd.read_csv('train.csv') 
 test = pd.read_csv('test.csv')
 X_train = train.drop('label', axis=1).values.reshape(-1, 28, 28, 1).astype('float32') / 255.0
 y_train = train['label'].values
@@ -35,7 +36,6 @@ class DigitDataset(Dataset):
             image = self.transform(image)
         return image, self.y[idx]
 
-# Update the transform
 transform = transforms.Compose([
     transforms.Normalize([0.5], [0.5])
 ])
