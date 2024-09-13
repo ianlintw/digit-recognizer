@@ -1,0 +1,21 @@
+# macOS system files
+.DS_Store
+
+# Data files
+*.csv
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Model checkpoints or saved models
+*.pth
+*.h5
+
+# Environment files
+.env
+venv/
+
